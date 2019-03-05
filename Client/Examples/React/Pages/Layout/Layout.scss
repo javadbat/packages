@@ -1,0 +1,25 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    .layout-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        &>.menu{
+            width: 320px;
+            height: 100%;
+            background-color: #333;
+        }
+        &>.content{
+            width: calc(100% - 320px);
+            height: 100%;
+            background-color: #eee;
+        }
+    }
+}

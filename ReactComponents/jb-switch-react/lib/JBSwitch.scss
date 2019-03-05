@@ -1,0 +1,55 @@
+.jb-switch-component-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    .caption{
+        display: inline-block;
+        padding: 0 0 0 8px;
+        font-weight: 400;
+        color: #535353;
+        transition: all 0.3s ease-in-out;
+        &.active{
+            transition: all 0.3s ease-in-out;
+            font-weight: 700;
+        }
+    }
+    .svg-wrapper{
+        width: 71px;
+        height: 44px;
+        .switch-svg{
+            width: 71px;
+            height: 44px;
+            &.active{
+                .trigger-circle{
+                    transition: all 0.3s ease-in-out;
+                    transform: translateX(280px);
+                }
+                .trigger-circle-bar{
+                    transition: all 0.3s ease-in-out;
+                    transform: translateX(280px);
+                    stroke: #00dc55;
+                }
+                .bg-bar{
+                    fill:#00dc55;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            .bg-bar{
+                fill:#e3e3e3;
+                transition: all 0.3s ease-in-out;
+            }
+            .trigger-circle{
+                //fill:#f9f9f9;
+                transition: all 0.3s ease-in-out;
+            }
+            .trigger-circle-bar{
+                fill:transparent;
+                stroke: #039be5;
+                stroke-width: 20px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+}

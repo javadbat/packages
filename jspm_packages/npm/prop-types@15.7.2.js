@@ -1,0 +1,1 @@
+module.exports = require("npm:prop-types@15.7.2/index.js");
