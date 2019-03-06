@@ -2,7 +2,6 @@ import React         from 'react'
 import JBSwitchService from './JBSwitchService'
 import { observable }          from 'mobx'
 import { observer }            from 'mobx-react'
-import './JBSwitch.scss'
 import './JBSwitch.css'
 import PropTypes from 'prop-types';
 

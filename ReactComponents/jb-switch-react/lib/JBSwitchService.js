@@ -1,5 +1,5 @@
 import React                                        from 'react'
-import { observable , extendObservable ,computed}   from 'mobx'
+import { observable}   from 'mobx'
 import { observer }                                 from 'mobx-react'
 @observer
 class JBSwitchService extends React.Component{

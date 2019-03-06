@@ -7,10 +7,11 @@ const rollup              = require('rollup');
 const rollupBabel         = require('rollup-plugin-babel') ;
 const rollupResolve       = require('rollup-plugin-node-resolve');
 const rollupMinify        = require('rollup-plugin-babel-minify');
-const rollupScss          = require('rollup-plugin-scss')
+// const rollupScss          = require('rollup-plugin-scss')
 const cleanup             = require('rollup-plugin-cleanup');
+const rollupReplace             = require('rollup-plugin-replace');
 // const rollupCss           = require('rollup-plugin-css-porter') 
-const config = require('./Config');
+const config = require('../Config');
 class BuildClass{
     constructor(){
         
@@ -20,36 +21,10 @@ class BuildClass{
         this.bundleJBReactComponents();
     }
     bundleJBModules() {
-        config.rollupConfig.packagesEntryPoints.forEach(function(rollupPackage){
-            let inputOptions = {
-                input:Path.join("",rollupPackage.path),
-                external:rollupPackage.exclude,
-                plugins: [
-                    //rollupCss(),
-                    rollupBabel({
-                        exclude: 'node_modules/**',
-                        externalHelpers :true,
-                        babelrc: false,
-                        presets: [
-                            "@babel/preset-env",
-                            //"babel-preset-stage-0",
-                            "@babel/preset-react",
-                            
-                        ],
-                        plugins:[
-                            "@babel/plugin-proposal-class-properties",
-                            "@babel/plugin-syntax-dynamic-import"
-                        ]
-                    }),
-                    rollupResolve({
-                        jsnext: true,
-                        main: true,
-                        browser: true
-                    }),
-                    rollupMinify(),
-                    cleanup()
-                  ]
-            }
+        config.rollupConfig.packagesEntryPoints.forEach((rollupPackage)=>{
+            let inputOptions = this._createInputOption("",rollupPackage);
+            let cjsInputOptions = this._createInputOption("cjs",rollupPackage);
+            let systemjsInputOptions = this._createInputOption("systemjs",rollupPackage);
             let outputOptions = {
                 // core output options
                 sourcemap: false,
@@ -70,23 +45,75 @@ class BuildClass{
             bundlePromise.then(function(bundle){
                 bundle.write(outputOptions).then(function(output){
                     console.log("     ", rollupPackage.dest.rainbow);
+                });
+            });
+                    //create special bundle for each file
+        if(rollupPackage.cjsDest){
+            let cjsBundlePromise = rollup.rollup(cjsInputOptions);
+            cjsBundlePromise.then(function(bundle){
+                bundle.write(cjsoutputOption).then(function(output){
+                    console.log("     ", rollupPackage.cjsDest.rainbow);
                     
                 });
-                if(rollupPackage.cjsDest){
-                    bundle.write(cjsoutputOption).then(function(output){
-                        console.log("     ", rollupPackage.cjsDest.rainbow);
-                        
-                    });
-                }
-                if(rollupPackage.systemjsDest){
-                    bundle.write(systemOutputOption).then(function(output){
-                        console.log("     ", rollupPackage.systemjsDest.rainbow);
-                        
-                    });
-                }
             });
+             console.log("\n","Publish JSPM client modules:".black.bgWhite, "Published".green);
+        }
+        if(rollupPackage.systemjsDest){
+            let systemjsBundlePromise = rollup.rollup(systemjsInputOptions);
+            systemjsBundlePromise.then(function(bundle){
+                bundle.write(systemOutputOption).then(function(output){
+                    console.log("     ", rollupPackage.systemjsDest.rainbow); 
+                });
+            })
+            
+        }
         });
-        console.log("\n","Publish JSPM client modules:".black.bgWhite, "Published".green);
+
+    }
+    _createInputOption(buildType,rollupPackage){
+        var buildTypePathPrefix = "";
+        switch(buildType){
+            case "cjs":
+                buildTypePathPrefix = ".cjs";
+                break;
+            case "systemjs":
+                buildTypePathPrefix = ".systemjs";
+                break;
+        }
+        let inputOptions = {
+            input:Path.join("",rollupPackage.path),
+            external:rollupPackage.exclude,
+            plugins: [
+                //rollupCss(),
+                rollupReplace({
+                    '$Build_Type_Prefix': buildTypePathPrefix
+                }),
+                rollupBabel({
+                    exclude: 'node_modules/**',
+                    externalHelpers :true,
+                    babelrc: false,
+                    presets: [
+                        "@babel/preset-env",
+                        //"babel-preset-stage-0",
+                        "@babel/preset-react",
+                        
+                    ],
+                    plugins:[
+                        "@babel/plugin-proposal-class-properties",
+                        "@babel/plugin-syntax-dynamic-import"
+                    ]
+                }),
+                rollupResolve({
+                    jsnext: true,
+                    main: true,
+                    browser: true
+                }),
+
+                //rollupMinify(),
+                cleanup()
+              ]
+        }
+        return inputOptions;
     }
     bundleJBReactComponents(){
         config.rollupConfig.reactComponentsEntryPoints.forEach(function(rollupPackage){
@@ -94,7 +121,7 @@ class BuildClass{
                 input:Path.join("",rollupPackage.path),
                 external:rollupPackage.exclude,
                 plugins: [
-                    rollupScss(),
+                    //rollupScss(),
                     //rollupCss(),
                     rollupBabel({
                         exclude: 'node_modules/**',
@@ -117,9 +144,8 @@ class BuildClass{
                         main: true,
                         browser: true
                     }),
-                    //rollupMinify(),
-                    rollupScss(),
-                    //cleanup()
+                    rollupMinify(),
+                    cleanup()
                   ]
             }
             let outputOptions = {

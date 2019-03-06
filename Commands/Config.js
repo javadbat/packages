@@ -13,7 +13,7 @@ var config = {
                 dest:"Modules/jb-module/DateTimeModule/dist/DateTimeConverter.min.js",
                 cjsDest:"Modules/jb-module/DateTimeModule/dist/DateTimeConverter.cjs.min.js",
                 systemjsDest:"Modules/jb-module/DateTimeModule/dist/DateTimeConverter.systemjs.min.js",
-                exclude:['../ExceptionHandler/ExceptionHandler']
+                exclude:[]
             },
             {
                 path:"Modules/jb-module/ExceptionHandler/ExceptionHandler.js",
@@ -29,19 +29,29 @@ var config = {
                 systemjsDest:"Modules/jb-module/FetchHandler/dist/FetchHandler.systemjs.min.js",
                 exclude:[]
             },
-                        {
+            {
                 path:"Modules/jb-router/lib/Router.js",
                 dest:"Modules/jb-router/dist/Router.min.js",
                 cjsDest:"Modules/jb-router/dist/Router.cjs.min.js",
                 systemjsDest:"Modules/jb-router/dist/Router.systemjs.min.js",
-                exclude:["react","react-dom","jb-modules/ExceptionHandler/ExceptionHandler"]
+                exclude:[
+                    "react",
+                    "react-dom",
+                    "jb-modules/ExceptionHandler/dist/ExceptionHandler.min",
+                    "jb-modules/ExceptionHandler/dist/ExceptionHandler.cjs.min",
+                    "jb-modules/ExceptionHandler/dist/ExceptionHandler.systemjs.min"
+                ]
             },
             {
                 path:"Modules/jb-module/RequestModule/RequestData.js",
                 dest:"Modules/jb-module/RequestModule/dist/RequestData.min.js",
                 cjsDest:"Modules/jb-module/RequestModule/dist/RequestData.cjs.min.js",
                 systemjsDest:"Modules/jb-module/RequestModule/dist/RequestData.systemjs.min.js",
-                exclude:["jb-modules/ExceptionHandler/ExceptionHandler"]
+                exclude:[
+                    "../ExceptionHandler/dist/ExceptionHandler.min",
+                    "../ExceptionHandler/dist/ExceptionHandler.systemjs.min",
+                    "../ExceptionHandler/dist/ExceptionHandler.cjs.min"
+                ]
             },
             {
                 path:"Modules/jb-module/RequestModule/UploadFileRequest.js",
