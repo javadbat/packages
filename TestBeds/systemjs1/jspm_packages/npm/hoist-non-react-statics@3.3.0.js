@@ -1,0 +1,1 @@
+module.exports = require("npm:hoist-non-react-statics@3.3.0/dist/hoist-non-react-statics.cjs.js");

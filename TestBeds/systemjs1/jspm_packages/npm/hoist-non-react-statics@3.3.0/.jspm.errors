@@ -1,0 +1,4 @@
+MultipleErrors: C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/hoist-non-react-statics@3.3.0/src/index.js:64:1: Unexpected reserved word export
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/hoist-non-react-statics@3.3.0/src/index.js:64:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/hoist-non-react-statics@3.3.0/src/index.js:64:8: Unexpected reserved word default
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/hoist-non-react-statics@3.3.0/src/index.js:64:16: Semi-colon expected

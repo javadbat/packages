@@ -1,15 +1,18 @@
-const Path = require("path");
-
+const Path      = require("path");
+const Colors    = require('colors');
 class Controller {
-
-    constructor() {
-
+    
+    constructor(environment) {
+        this.environment = environment;
+        if(this.environment == undefined){
+            console.error("Controller class need to get project environment to run properly".red)
+        }
         this.setProperties();
     }
 
     setProperties() {
 
-        this.viewDir   = Path.resolve(__dirname, '../../Client/Views');
+        this.viewDir   = Path.resolve(__dirname, '../../TestBeds/'+this.environment+'/Client/Views');
         this.path = require('path');
     }
 

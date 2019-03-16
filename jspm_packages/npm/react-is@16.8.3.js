@@ -1,1 +1,0 @@
-module.exports = require("npm:react-is@16.8.3/index.js");

@@ -43,18 +43,18 @@ var config = {
                 ]
             },
             {
-                path:"Modules/jb-module/RequestModule/RequestData.js",
+                path:"Modules/jb-module/RequestModule/lib/RequestData.js",
                 dest:"Modules/jb-module/RequestModule/dist/RequestData.min.js",
                 cjsDest:"Modules/jb-module/RequestModule/dist/RequestData.cjs.min.js",
                 systemjsDest:"Modules/jb-module/RequestModule/dist/RequestData.systemjs.min.js",
                 exclude:[
-                    "../ExceptionHandler/dist/ExceptionHandler.min",
-                    "../ExceptionHandler/dist/ExceptionHandler.systemjs.min",
-                    "../ExceptionHandler/dist/ExceptionHandler.cjs.min"
+                    "../../ExceptionHandler/dist/ExceptionHandler.min",
+                    "../../ExceptionHandler/dist/ExceptionHandler.systemjs.min",
+                    "../../ExceptionHandler/dist/ExceptionHandler.cjs.min"
                 ]
             },
             {
-                path:"Modules/jb-module/RequestModule/UploadFileRequest.js",
+                path:"Modules/jb-module/RequestModule/lib/UploadFileRequest.js",
                 dest:"Modules/jb-module/RequestModule/dist/UploadFileRequest.min.js",
                 cjsDest:"Modules/jb-module/RequestModule/dist/UploadFileRequest.cjs.min.js",
                 systemjsDest:"Modules/jb-module/RequestModule/dist/UploadFileRequest.systemjs.min.js",

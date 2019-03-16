@@ -6,16 +6,19 @@ const watch       = require('gulp-watch');
 const sass        = require('gulp-sass');
 const gulp        = require('gulp');
 const path        = require('path');
+const Colors        = require('colors');
 const scssWatchFile = require("./Config/SassFilesConfig").watchingFiles
 class ServeApplication{
-    constructor(){
+    constructor(environment){
         process.env.NODE_ENV = "development";
         this.expressApp = new express();
         this.port = 100;
+        this.environment = environment;
     }
     runExpress(){
         this.expressApp.listen(this.port,()=>{
             console.log("Server Runing On http://localhost:"+this.port);
+            console.log("environment:"+this.environment.green);
         })
     }
     registerPageUrls(){
@@ -24,12 +27,14 @@ class ServeApplication{
         });
     }
     getContollerMethod(routeData) {
-        var controller = new(require('./Controller/'+routeData.controller));
+        var controller = new(require('./Controller/'+routeData.controller))(this.environment);
         return controller[routeData.action].bind(controller);
     }
     RegisterStaticFileRoutes(){
-        this.expressApp.use('/jspm_packages', express.static('./jspm_packages'));
-        this.expressApp.use('/Client', express.static('./Client'));
+        this.expressApp.use('/jspm_packages', express.static('./TestBeds/'+this.environment+'/jspm_packages'));
+        this.expressApp.use('/Client', express.static('./TestBeds/'+this.environment+'/Client'));
+        //regiser local package address as a new address
+        this.expressApp.use('/jb-modules', express.static('./Modules/jb-module'));
         this.expressApp.use('/', express.static('./'));
     }
     watchScssFile(){

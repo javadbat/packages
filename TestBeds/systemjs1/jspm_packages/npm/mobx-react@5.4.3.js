@@ -1,0 +1,1 @@
+module.exports = require("npm:mobx-react@5.4.3/index.js");

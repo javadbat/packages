@@ -1,0 +1,1 @@
+module.exports = require("npm:react-lifecycles-compat@3.0.4/react-lifecycles-compat.cjs.js");

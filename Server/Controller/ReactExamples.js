@@ -2,8 +2,8 @@ const Controller = require("./Controller");
 
 class ReactExamples extends Controller {
 
-    constructor() {
-        super();
+    constructor(environment) {
+        super(environment);
     }
 
     Systemjs(request, respond) {

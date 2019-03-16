@@ -1,0 +1,35 @@
+MultipleErrors: C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/empty.js:2:1: Unexpected reserved word export
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/empty.js:2:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/empty.js:3:1: Unexpected reserved word export
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/empty.js:3:8: Semi-colon expected
+
+MultipleErrors: C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1:1: Unexpected reserved word import
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1:151: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:2:1: Unexpected reserved word import
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:2:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:2:90: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:2:95: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1436:1: Unexpected reserved word export
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1436:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1436:31: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1436:34: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1436:114: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/custom.module.js:1436:117: Semi-colon expected
+
+MultipleErrors: C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1:1: Unexpected reserved word import
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1:162: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:2:1: Unexpected reserved word import
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:2:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:2:90: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:2:95: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:3:1: Unexpected reserved word import
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:3:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:3:54: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1450:1: Unexpected reserved word export
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1450:8: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1450:31: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1450:34: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1450:114: Semi-colon expected
+C:/Users/Javadbat/AppData/Local/.jspm/packages/npm/mobx-react@5.4.3/index.module.js:1450:117: Semi-colon expected

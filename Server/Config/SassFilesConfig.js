@@ -11,8 +11,17 @@ const sassFiles = [
     //     watch: false
     // },
     {
-        src: './Client/Examples/React/Pages/Layout/Layout.scss',
+        src: './TestBeds/systemjs1/Client/Examples/React/Pages/Layout/Layout.scss',
         watch: true
+    },
+    {
+        src: './ReactComponents/jb-switch-react/lib/JBSwitch.scss',
+        watch: true
+    },
+    {
+        src: './ReactComponents/jb-switch-react/lib/JBSwitch.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-switch-react/dist/JBSwitch.css"
     }
 ];
 

@@ -9,5 +9,10 @@ var Routes = [
         controller:"ReactExamples",
         action:"Systemjs"
     },
+    {
+        url:"/Examples/React/*",
+        controller:"ReactExamples",
+        action:"Systemjs"
+    }
 ]
 exports.default = Routes

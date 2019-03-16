@@ -2,8 +2,8 @@ const Controller = require("./Controller");
 
 class IndexPageController extends Controller {
 
-    constructor() {
-        super();
+    constructor(environment) {
+        super(environment);
     }
 
     index(request, respond) {
