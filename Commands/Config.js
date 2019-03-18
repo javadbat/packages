@@ -9,21 +9,21 @@ var config = {
                 exclude:[]
             },
             {
-                path:"Modules/jb-module/DateTimeModule/DateTimeConverter.js",
+                path:"Modules/jb-module/DateTimeModule/lib/DateTimeConverter.js",
                 dest:"Modules/jb-module/DateTimeModule/dist/DateTimeConverter.min.js",
                 cjsDest:"Modules/jb-module/DateTimeModule/dist/DateTimeConverter.cjs.min.js",
                 systemjsDest:"Modules/jb-module/DateTimeModule/dist/DateTimeConverter.systemjs.min.js",
                 exclude:[]
             },
             {
-                path:"Modules/jb-module/ExceptionHandler/ExceptionHandler.js",
+                path:"Modules/jb-module/ExceptionHandler/lib/ExceptionHandler.js",
                 dest:"Modules/jb-module/ExceptionHandler/dist/ExceptionHandler.min.js",
                 cjsDest:"Modules/jb-module/ExceptionHandler/dist/ExceptionHandler.cjs.min.js",
                 systemjsDest:"Modules/jb-module/ExceptionHandler/dist/ExceptionHandler.systemjs.min.js",
                 exclude:[]
             },
             {
-                path:"Modules/jb-module/FetchHandler/FetchHandler.js",
+                path:"Modules/jb-module/FetchHandler/lib/FetchHandler.js",
                 dest:"Modules/jb-module/FetchHandler/dist/FetchHandler.min.js",
                 cjsDest:"Modules/jb-module/FetchHandler/dist/FetchHandler.cjs.min.js",
                 systemjsDest:"Modules/jb-module/FetchHandler/dist/FetchHandler.systemjs.min.js",
