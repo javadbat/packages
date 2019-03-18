@@ -71,36 +71,41 @@ class BuildClass{
 
     }
     _createInputOption(buildType,rollupPackage){
-        var buildTypePathPrefix = "";
+        var rollupReplaceConfig = {
+            '$Build_Type_Prefix': ""
+        };
         switch(buildType){
             case "cjs":
-                buildTypePathPrefix = ".cjs";
+                rollupReplaceConfig = {
+                    '$Build_Type_Prefix': ".cjs"
+                }
                 break;
             case "systemjs":
-                buildTypePathPrefix = ".systemjs";
+                rollupReplaceConfig = {
+                    '$Build_Type_Prefix': ".systemjs",
+                    '.css':".css!"
+                }
                 break;
         }
         let inputOptions = {
             input:Path.join("",rollupPackage.path),
             external:rollupPackage.exclude,
             plugins: [
-                //rollupCss(),
-                rollupReplace({
-                    '$Build_Type_Prefix': buildTypePathPrefix
-                }),
+                rollupReplace(rollupReplaceConfig),
                 rollupBabel({
                     exclude: 'node_modules/**',
                     externalHelpers :true,
                     babelrc: false,
                     presets: [
+                        
                         "@babel/preset-env",
-                        //"babel-preset-stage-0",
                         "@babel/preset-react",
                         
                     ],
                     plugins:[
+                        ["@babel/plugin-proposal-decorators",{ "legacy": true }],
                         "@babel/plugin-proposal-class-properties",
-                        "@babel/plugin-syntax-dynamic-import"
+                        "@babel/plugin-syntax-dynamic-import",
                     ]
                 }),
                 rollupResolve({
@@ -108,46 +113,46 @@ class BuildClass{
                     main: true,
                     browser: true
                 }),
-
-                //rollupMinify(),
+                rollupMinify(),
                 cleanup()
               ]
         }
         return inputOptions;
     }
     bundleJBReactComponents(){
-        config.rollupConfig.reactComponentsEntryPoints.forEach(function(rollupPackage){
-            let inputOptions = {
-                input:Path.join("",rollupPackage.path),
-                external:rollupPackage.exclude,
-                plugins: [
-                    //rollupScss(),
-                    //rollupCss(),
-                    rollupBabel({
-                        exclude: 'node_modules/**',
-                        externalHelpers :true,
-                        babelrc: false,
-                        presets: [
-                            "@babel/preset-env",
-                            "@babel/preset-react",
+        config.rollupConfig.reactComponentsEntryPoints.forEach((rollupPackage)=>{
+            let inputOptions = this._createInputOption("",rollupPackage);
+            let cjsInputOptions = this._createInputOption("cjs",rollupPackage);
+            let systemjsInputOptions = this._createInputOption("systemjs",rollupPackage);
+            // let inputOptions = {
+            //     input:Path.join("",rollupPackage.path),
+            //     external:rollupPackage.exclude,
+            //     plugins: [
+            //         rollupBabel({
+            //             exclude: 'node_modules/**',
+            //             externalHelpers :true,
+            //             babelrc: false,
+            //             presets: [
+            //                 "@babel/preset-env",
+            //                 "@babel/preset-react",
                             
-                        ],
-                        plugins:[
-                            ["@babel/plugin-proposal-decorators",{ "legacy": true }],
-                            "@babel/plugin-proposal-class-properties",
-                            "@babel/plugin-syntax-dynamic-import",
+            //             ],
+            //             plugins:[
+            //                 ["@babel/plugin-proposal-decorators",{ "legacy": true }],
+            //                 "@babel/plugin-proposal-class-properties",
+            //                 "@babel/plugin-syntax-dynamic-import",
                             
-                        ]
-                    }),
-                    rollupResolve({
-                        jsnext: true,
-                        main: true,
-                        browser: true
-                    }),
-                    rollupMinify(),
-                    cleanup()
-                  ]
-            }
+            //             ]
+            //         }),
+            //         rollupResolve({
+            //             jsnext: true,
+            //             main: true,
+            //             browser: true
+            //         }),
+            //         rollupMinify(),
+            //         cleanup()
+            //       ]
+            // }
             let outputOptions = {
                 // core output options
                 sourcemap: false,
@@ -170,19 +175,27 @@ class BuildClass{
                     console.log("     ", rollupPackage.dest.rainbow);
                     
                 });
-                if(rollupPackage.cjsDest){
+            });
+            if(rollupPackage.cjsDest){
+                let bundlePromise = rollup.rollup(cjsInputOptions);
+                bundlePromise.then(function(bundle){
                     bundle.write(cjsoutputOption).then(function(output){
                         console.log("     ", rollupPackage.cjsDest.rainbow);
                         
                     });
-                }
-                if(rollupPackage.systemjsDest){
+                });
+
+            }
+            if(rollupPackage.systemjsDest){
+                let bundlePromise = rollup.rollup(systemjsInputOptions);
+                bundlePromise.then(function(bundle){
                     bundle.write(systemOutputOption).then(function(output){
                         console.log("     ", rollupPackage.systemjsDest.rainbow);
                         
                     });
-                }
-            });
+                });
+
+            }
         });
         console.log("\n","Publish JSPM client modules:".black.bgWhite, "Published".green);
     }

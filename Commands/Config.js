@@ -67,7 +67,14 @@ var config = {
                 dest:"ReactComponents/jb-switch-react/dist/JBSwitch.min.js",
                 cjsDest:"ReactComponents/jb-switch-react/dist/JBSwitch.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-switch-react/dist/JBSwitch.systemjs.min.js",
-                exclude:["react","mobx","mobx-react","prop-types","./JBSwitch.css"]
+                exclude:["react","mobx","mobx-react","./JBSwitch.css","./JBSwitch.css!"]
+            },
+            {
+                path:"ReactComponents/jb-checkbox-react/lib/JBCheckBox.js",
+                dest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.min.js",
+                cjsDest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.systemjs.min.js",
+                exclude:["react","mobx","mobx-react","prop-types","./JBCheckBox.css","./JBCheckBox.css!"]
             },
         ]
     }
