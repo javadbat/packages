@@ -76,6 +76,13 @@ var config = {
                 systemjsDest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.systemjs.min.js",
                 exclude:["react","mobx","mobx-react","prop-types","./JBCheckBox.css","./JBCheckBox.css!"]
             },
+            {
+                path:"ReactComponents/jb-selectbox-react/lib/JBSelectBox.js",
+                dest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.min.js",
+                cjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.systemjs.min.js",
+                exclude:["react","mobx","mobx-react","./JBSelectBox.css","./JBSelectBox.css!"]
+            },
         ]
     }
 }

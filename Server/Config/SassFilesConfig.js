@@ -32,6 +32,16 @@ const sassFiles = [
         src: './ReactComponents/jb-checkbox-react/lib/JBCheckBox.scss',
         watch: true,
         dest:"./ReactComponents/jb-checkbox-react/lib/JBCheckBox.css"
+    },
+    {
+        src: './ReactComponents/jb-selectbox-react/lib/JBSelectBox.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-selectbox-react/lib/JBSelectBox.css"
+    },
+    {
+        src: './ReactComponents/jb-selectbox-react/lib/JBSelectBox.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-selectbox-react/dist/JBSelectBox.css"
     }
 ];
 
