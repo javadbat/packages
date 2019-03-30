@@ -81,7 +81,14 @@ var config = {
                 dest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.min.js",
                 cjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.systemjs.min.js",
-                exclude:["react","mobx","mobx-react","./JBSelectBox.css","./JBSelectBox.css!"]
+                exclude:["react","mobx","mobx-react","./JBSelectBox.css","./JBSelectBox.css!","./JBSelectBoxData$Build_Type_Prefix.min","./JBSelectBoxData.cjs.min","./JBSelectBoxData.min","./JBSelectBoxData.systemjs.min"]
+            },
+            {
+                path:"ReactComponents/jb-selectbox-react/lib/JBSelectBoxData.js",
+                dest:"ReactComponents/jb-selectbox-react/dist/JBSelectBoxData.min.js",
+                cjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBoxData.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBoxData.systemjs.min.js",
+                exclude:["mobx"]
             },
         ]
     }
