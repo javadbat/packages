@@ -56,7 +56,6 @@ class BuildClass{
                     
                 });
             });
-             console.log("\n","Publish JSPM client modules:".black.bgWhite, "Published".green);
         }
         if(rollupPackage.systemjsDest){
             let systemjsBundlePromise = rollup.rollup(systemjsInputOptions);
@@ -197,7 +196,6 @@ class BuildClass{
 
             }
         });
-        console.log("\n","Publish JSPM client modules:".black.bgWhite, "Published".green);
     }
 }
 var build = new BuildClass()

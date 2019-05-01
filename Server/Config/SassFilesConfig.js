@@ -42,6 +42,16 @@ const sassFiles = [
         src: './ReactComponents/jb-selectbox-react/lib/JBSelectBox.scss',
         watch: true,
         dest:"./ReactComponents/jb-selectbox-react/dist/JBSelectBox.css"
+    },
+    {
+        src: './ReactComponents/jb-dateinput-react/lib/JBDateInput.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-dateinput-react/dist/JBDateInput.css"
+    },
+    {
+        src: './ReactComponents/jb-dateinput-react/lib/JBDateInput.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-dateinput-react/lib/JBDateInput.css"
     }
 ];
 

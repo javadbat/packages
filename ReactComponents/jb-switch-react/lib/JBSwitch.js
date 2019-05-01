@@ -3,7 +3,6 @@ import JBSwitchService from './JBSwitchService'
 import { observable }          from 'mobx'
 import { observer }            from 'mobx-react'
 import './JBSwitch.css'
-import PropTypes from 'prop-types';
 
 @observer
  class JBSwitch extends JBSwitchService{
@@ -33,14 +32,5 @@ import PropTypes from 'prop-types';
         return(renderDom);
 
     }
- }
- JBSwitch.propTypes = {
-     value:PropTypes.bool.isRequired,
-     onChange:PropTypes.func,
-     trueTitle:PropTypes.string,
-     falseTitle:PropTypes.string,
-     //if we set it to true component will update value by it self and dont need to update value in onChange event 
-     //onChange still calling but not necessary anymore
-     reactive:PropTypes.bool
  }
  export default JBSwitch

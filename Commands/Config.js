@@ -90,6 +90,13 @@ var config = {
                 systemjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBoxData.systemjs.min.js",
                 exclude:["mobx"]
             },
+            {
+                path:"ReactComponents/jb-dateinput-react/lib/JBDateInput.js",
+                dest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.min.js",
+                cjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.systemjs.min.js",
+                exclude:["react","mobx",'mobx-react','jb-modules/DateTimeModule/dist/DateTimeConverter.min','./JBDateInput.css','./JBDateInput.css!']
+            },
         ]
     }
 }
