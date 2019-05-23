@@ -52,7 +52,17 @@ const sassFiles = [
         src: './ReactComponents/jb-dateinput-react/lib/JBDateInput.scss',
         watch: true,
         dest:"./ReactComponents/jb-dateinput-react/lib/JBDateInput.css"
-    }
+    },
+    {
+        src: './ReactComponents/jb-image-uploader-react/lib/JBImageUploader.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-image-uploader-react/lib/JBImageUploader.css"
+    },
+    {
+        src: './ReactComponents/jb-image-uploader-react/lib/JBImageUploader.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-image-uploader-react/dist/JBImageUploader.css"
+    },
 ];
 
 

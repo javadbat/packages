@@ -97,6 +97,13 @@ var config = {
                 systemjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.systemjs.min.js",
                 exclude:["react","mobx",'mobx-react','jb-modules/DateTimeModule/dist/DateTimeConverter.min','./JBDateInput.css','./JBDateInput.css!']
             },
+            {
+                path:"ReactComponents/jb-image-uploader-react/lib/JBImageUploader.js",
+                dest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.min.js",
+                cjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.systemjs.min.js",
+                exclude:["react","mobx",'mobx-react','react-dom','jb-modules/RequestModule/dist/UploadFileRequest.min','./JBImageUploader.css','./JBImageUploader.css!']
+            },
         ]
     }
 }

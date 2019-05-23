@@ -1,27 +1,47 @@
-import React                                        from 'react'
+
 import { observable}   from 'mobx'
-import { observer }                                 from 'mobx-react'
-@observer
-class JBSwitchService extends React.Component{
+class JBSwitchService{
     JBSwitchComponentDom = null;
-    constructor(config){
-        super();
-        this.config = observable(config);
+    @observable isLoading = false;
+    constructor(props){
+        this.config = observable(props);
     }
-    componentWillReceiveProps(nextProps){
-        if(this.config.value!=nextProps.value){
-            this.config.value=nextProps.value 
-        }
-    }
+
     onClick(){
+        var newValue = !this.config.value
+        if(typeof this.config.onBeforeChange == "function"){
+            var response = this.config.onBeforeChange(newValue);
+            if(typeof response.then =="function"){
+                //if we had a promise
+                //show loading
+                this.showLoading();
+                response.then((data)=>{
+                    this.callOnChange(newValue);
+                    this.hideLoading();
+                }).catch((e)=>{
+                    //stop loadind and fall back
+                    this.hideLoading();
+                })
+            }else{
+                this.callOnChange(newValue);
+            }
+        }else{
+            this.callOnChange(newValue);
+        }
+        
+    }
+    showLoading(){
+        this.isLoading = true;
+    }
+    hideLoading(){
+        this.isLoading = false;
+    }
+    callOnChange(newValue){
         //call onChange callback
-        //temporary we do it ourself
-        //we dont make it reacive
-        var value = !this.config.value
         var event = new Event("change",{
             detail: {
                 oldValue:this.config.value,
-                newValue:value
+                newValue:newValue
 			},
 			bubbles: true,
 			cancelable: true
@@ -29,10 +49,12 @@ class JBSwitchService extends React.Component{
         event.simulated = true;
         let tracker = this.JBSwitchComponentDom._valueTracker;
         if (tracker) {
-            tracker.setValue(value);
+            tracker.setValue(newValue);
         }
-        this.JBSwitchComponentDom.value = value;
-        this.JBSwitchComponentDom.onchange = (e)=>this.config.onChange(e);
+        this.JBSwitchComponentDom.value = newValue;
+        if(this.config.onChange){
+            this.JBSwitchComponentDom.onchange = (e)=>this.config.onChange(e);
+        }
         this.JBSwitchComponentDom.dispatchEvent(event);
     }
 }

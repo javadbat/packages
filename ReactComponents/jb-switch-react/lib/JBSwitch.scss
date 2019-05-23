@@ -14,7 +14,6 @@
             font-weight: 700;
         }
     }
-    
     .svg-wrapper{
         width: 71px;
         height: 44px;
@@ -49,6 +48,27 @@
                 stroke: #039be5;
                 stroke-width: 20px;
                 transition: all 0.3s ease-in-out;
+                stroke-dasharray: 800,800;
+                stroke-dashoffset: 0;
+                stroke-linecap: round;
+                &.loading{
+                    animation: jb-switch-loading-dash 1.5s ease-in-out infinite;
+                }
+                
+                @keyframes jb-switch-loading-dash {
+                    0% {
+                      stroke-dasharray: 1,800;
+                      stroke-dashoffset: 0;
+                    }
+                    50% {
+                      stroke-dasharray: 600,800;
+                      stroke-dashoffset: -600;
+                    }
+                    100% {
+                      stroke-dasharray: 1,800;
+                      stroke-dashoffset: 0;
+                    }
+                }
             }
         }
     }
