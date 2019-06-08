@@ -63,6 +63,16 @@ const sassFiles = [
         watch: true,
         dest:"./ReactComponents/jb-image-uploader-react/dist/JBImageUploader.css"
     },
+    {
+        src: './ReactComponents/jb-searchbar-react/lib/JBSearchBar.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-searchbar-react/lib/JBSearchBar.css"
+    },
+    {
+        src: './ReactComponents/jb-searchbar-react/lib/JBSearchBar.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-searchbar-react/dist/JBSearchBar.css"
+    },
 ];
 
 

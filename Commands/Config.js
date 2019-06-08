@@ -81,7 +81,9 @@ var config = {
                 dest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.min.js",
                 cjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.systemjs.min.js",
-                exclude:["react","mobx","mobx-react","./JBSelectBox.css","./JBSelectBox.css!","./JBSelectBoxData$Build_Type_Prefix.min","./JBSelectBoxData.cjs.min","./JBSelectBoxData.min","./JBSelectBoxData.systemjs.min"]
+                exclude:["react","mobx","mobx-react",
+                "./JBSelectBox.css","./JBSelectBox.css!",
+                "./JBSelectBoxData$Build_Type_Prefix.min","./JBSelectBoxData.cjs.min","./JBSelectBoxData.min","./JBSelectBoxData.systemjs.min"]
             },
             {
                 path:"ReactComponents/jb-selectbox-react/lib/JBSelectBoxData.js",
@@ -103,6 +105,29 @@ var config = {
                 cjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.systemjs.min.js",
                 exclude:["react","mobx",'mobx-react','react-dom','jb-modules/RequestModule/dist/UploadFileRequest.min','./JBImageUploader.css','./JBImageUploader.css!']
+            },
+            {
+                path:"ReactComponents/jb-searchbar-react/lib/JBSearchBar.js",
+                dest:"ReactComponents/jb-searchbar-react/dist/JBSearchBar.min.js",
+                cjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBar.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBar.systemjs.min.js",
+                exclude:["react","mobx",'mobx-react','react-dom',
+                'jb-selectbox-react/dist/JBSelectBoxData$Build_Type_Prefix.min',
+                'jb-selectbox-react/dist/JBSelectBoxData.systemjs.min',
+                'jb-selectbox-react/dist/JBSelectBoxData.cjs.min',
+                'jb-selectbox-react/dist/JBSelectBoxData.min',
+                'jb-dateinput-react/dist/JBDateInput$Build_Type_Prefix.min',
+                'jb-dateinput-react/dist/JBDateInput.systemjs.min',
+                'jb-dateinput-react/dist/JBDateInput.cjs.min',
+                'jb-dateinput-react/dist/JBDateInput.min',
+                './JBSearchBar.css','./JBSearchBar.css!']
+            },
+            {
+                path:"ReactComponents/jb-searchbar-react/lib/JBSearchBarData.js",
+                dest:"ReactComponents/jb-searchbar-react/dist/JBSearchBarData.min.js",
+                cjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBarData.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBarData.systemjs.min.js",
+                exclude:['mobx']
             },
         ]
     }
