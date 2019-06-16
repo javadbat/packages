@@ -97,14 +97,14 @@ var config = {
                 dest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.min.js",
                 cjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.systemjs.min.js",
-                exclude:["react","mobx",'mobx-react','jb-modules/DateTimeModule/dist/DateTimeConverter.min','./JBDateInput.css','./JBDateInput.css!']
+                exclude:["react","mobx",'mobx-react','jb-modules/DateTimeModule/dist/DateTimeConverter.cjs.min','./JBDateInput.css','./JBDateInput.css!']
             },
             {
                 path:"ReactComponents/jb-image-uploader-react/lib/JBImageUploader.js",
                 dest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.min.js",
                 cjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.systemjs.min.js",
-                exclude:["react","mobx",'mobx-react','react-dom','jb-modules/RequestModule/dist/UploadFileRequest.min','./JBImageUploader.css','./JBImageUploader.css!']
+                exclude:["react","mobx",'mobx-react','react-dom','jb-modules/RequestModule/dist/UploadFileRequest.cjs.min','./JBImageUploader.css','./JBImageUploader.css!']
             },
             {
                 path:"ReactComponents/jb-searchbar-react/lib/JBSearchBar.js",
@@ -112,9 +112,10 @@ var config = {
                 cjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBar.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBar.systemjs.min.js",
                 exclude:["react","mobx",'mobx-react','react-dom',
-                'jb-selectbox-react/dist/JBSelectBoxData$Build_Type_Prefix.min',
-                'jb-selectbox-react/dist/JBSelectBoxData.systemjs.min',
-                'jb-selectbox-react/dist/JBSelectBoxData.cjs.min',
+                'jb-selectbox-react/dist/JBSelectBox$Build_Type_Prefix.min',
+                'jb-selectbox-react/dist/JBSelectBox.systemjs.min',
+                'jb-selectbox-react/dist/JBSelectBox.cjs.min',
+                'jb-selectbox-react/dist/JBSelectBox.min',
                 'jb-selectbox-react/dist/JBSelectBoxData.min',
                 'jb-dateinput-react/dist/JBDateInput$Build_Type_Prefix.min',
                 'jb-dateinput-react/dist/JBDateInput.systemjs.min',
@@ -128,6 +129,29 @@ var config = {
                 cjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBarData.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-searchbar-react/dist/JBSearchBarData.systemjs.min.js",
                 exclude:['mobx']
+            },
+            {
+                path:"ReactComponents/jb-grid-react/lib/JBGrid.js",
+                dest:"ReactComponents/jb-grid-react/dist/JBGrid.min.js",
+                cjsDest:"ReactComponents/jb-grid-react/dist/JBGrid.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-grid-react/dist/JBGrid.systemjs.min.js",
+                exclude:["react","mobx",'mobx-react','react-dom',
+                'jb-searchbar-react/dist/JBSearchBar$Build_Type_Prefix.min.min',
+                'jb-searchbar-react/dist/JBSearchBar.systemjs.min',
+                'jb-searchbar-react/dist/JBSearchBar.cjs.min',
+                'jb-searchbar-react/dist/JBSearchBar.min',
+                'jb-modules/Culture/dist/PersianCulture.cjs.min',
+                'jb-modules/FetchHandler/dist/FetchHandler.cjs.min',
+                'jb-modules/RequestModule/dist/RequestData.cjs.min',
+                'jb-searchbar-react/dist/JBSearchBarData.min',
+                './JBGrid.css','./JBGrid.css!','./JBLoading.css','./JBLoading.css!']
+            },
+            {
+                path:"ReactComponents/jb-grid-react/lib/JBGridData.js",
+                dest:"ReactComponents/jb-grid-react/dist/JBGridData.min.js",
+                cjsDest:"ReactComponents/jb-grid-react/dist/JBGridData.cjs.min.js",
+                systemjsDest:"ReactComponents/jb-grid-react/dist/JBGridData.systemjs.min.js",
+                exclude:['mobx','./JBLoading.css','./JBLoading.css!']
             },
         ]
     }

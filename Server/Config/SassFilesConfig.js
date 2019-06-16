@@ -73,6 +73,26 @@ const sassFiles = [
         watch: true,
         dest:"./ReactComponents/jb-searchbar-react/dist/JBSearchBar.css"
     },
+    {
+        src: './ReactComponents/jb-grid-react/lib/JBGrid.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-grid-react/dist/JBGrid.css"
+    },
+    {
+        src: './ReactComponents/jb-grid-react/lib/JBLoading/JBLoading.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-grid-react/dist/JBLoading/JBLoading.css"
+    },
+    {
+        src: './ReactComponents/jb-grid-react/lib/JBGrid.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-grid-react/lib/JBGrid.css"
+    },
+    {
+        src: './ReactComponents/jb-grid-react/lib/JBLoading/JBLoading.scss',
+        watch: true,
+        dest:"./ReactComponents/jb-grid-react/lib/JBLoading/JBLoading.css"
+    },
 ];
 
 

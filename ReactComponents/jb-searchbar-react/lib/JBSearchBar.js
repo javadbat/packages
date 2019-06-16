@@ -4,7 +4,7 @@
 
 import React                from 'react'
 import JBSearchBarService   from './JBSearchBarService'
-import JBSelectBox          from 'jb-selectbox-react/dist/JBSelectBoxData$Build_Type_Prefix.min'
+import JBSelectBox          from 'jb-selectbox-react/dist/JBSelectBox$Build_Type_Prefix.min'
 import { observer }         from 'mobx-react'
 import './JBSearchBar.css'
 import JBDateInput          from 'jb-dateinput-react/dist/JBDateInput$Build_Type_Prefix.min';

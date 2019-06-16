@@ -1,0 +1,38 @@
+{
+  "name": "jb-searchbar-react",
+  "description": "react mobx jb searchbar",
+  "author": {
+		"name": "mohammad javad bathaei",
+		"email": "javadbat@gmail.com"
+	},
+  "keywords": [
+    "jb",
+    "jb-searchbar",
+    "jb-searchbar-react",
+    "searchbar",
+    "filter",
+    "search",
+    "react",
+    "mobx"
+  ],
+  "version": "0.0.1",
+  "bugs": "https://github.com/javadbat/jb-searchbar-react/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "dist/"
+  ],
+  "main": "dist/JBSearchBar.cjs.min.js",
+  "jsnext:main":"./dist/JBSearchBar.min.js",
+  "module": "./dist/JBSearchBar.min.js",
+  "repository": {
+		"type": "git",
+		"url": "git@github.com:javadbat/jb-searchbar-react.git"
+	},
+  "dependencies": {
+    "jb-selectbox-react":"jb-selectbox-react@0.0.1",
+    "jb-dateinput-react":"jb-dateinput-react@0.0.1"
+  }
+}
