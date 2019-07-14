@@ -1,9 +1,10 @@
 import routerData from '../../Config/JBRouterConfigData'
-import Router from '../../../../../../../Modules/jb-router/dist/Router.min';
+import Router from '../../../../../../../Modules/jb-router/lib/Router';
+import ExceptionHandler from '../../../../../../../Modules/jb-module/ExceptionHandler/lib/ExceptionHandler'
 class LayoutModel{
 
     constructor(){
-        this.router = new Router(routerData);
+        this.router = new Router(routerData,ExceptionHandler.newException);
     }
     loadPage(event){
         event.preventDefault();
