@@ -35,6 +35,7 @@ class ServeApplication{
         this.expressApp.use('/Client', express.static('./TestBeds/'+this.environment+'/Client'));
         //regiser local package address as a new address
         this.expressApp.use('/jb-modules', express.static('./Modules/jb-module'));
+        this.expressApp.use('/jb-checkbox-react', express.static('./ReactComponents/jb-checkbox-react'));
         this.expressApp.use('/', express.static('./'));
     }
     watchScssFile(){

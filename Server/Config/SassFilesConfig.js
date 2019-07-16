@@ -15,6 +15,10 @@ const sassFiles = [
         watch: true
     },
     {
+        src: './TestBeds/systemjs1/Client/Examples/React/Pages/FormElementTestPage/FormElementTestPage.scss',
+        watch: true
+    },
+    {
         src: './ReactComponents/jb-switch-react/lib/JBSwitch.scss',
         watch: true
     },
