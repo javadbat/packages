@@ -13,6 +13,7 @@ class Controller {
     setProperties() {
 
         this.viewDir   = Path.resolve(__dirname, '../../TestBeds/'+this.environment+'/Client/Views');
+        this.assetDir   = Path.resolve(__dirname, '../../TestBeds/'+this.environment+'/Client/Assets');
         this.path = require('path');
     }
 

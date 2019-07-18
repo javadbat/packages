@@ -13,6 +13,18 @@ var Routes = [
         url:"/Examples/React/*",
         controller:"ReactExamples",
         action:"Systemjs"
+    },
+    {
+        url:"/api/testimageupload",
+        controller:"TestApi",
+        action:"Testimageupload",
+        method:"POST"
+    },
+    {
+        url:"/api/testimagedownload/:imageName",
+        controller:"TestApi",
+        action:"Testimagedownload",
+        method:"GET"
     }
 ]
 exports.default = Routes

@@ -7,11 +7,14 @@ const sass        = require('gulp-sass');
 const gulp        = require('gulp');
 const path        = require('path');
 const Colors        = require('colors');
+const fileUpload = require('express-fileupload');
+const bodyParser = require('body-parser');
 const scssWatchFile = require("./Config/SassFilesConfig").watchingFiles
 class ServeApplication{
     constructor(environment){
         process.env.NODE_ENV = "development";
         this.expressApp = new express();
+        this.registerRequestParsers();
         this.port = 100;
         this.environment = environment;
     }
@@ -21,9 +24,21 @@ class ServeApplication{
             console.log("environment:"+this.environment.green);
         })
     }
+    registerRequestParsers(){
+        // enable files upload
+        this.expressApp.use(fileUpload({
+            createParentPath: true
+        }));
+        this.expressApp.use(bodyParser.json());
+        this.expressApp.use(bodyParser.urlencoded({extended: true}));
+    }
     registerPageUrls(){
         RoutesData.forEach(routeData => {
-            this.expressApp.get(routeData.url,this.getContollerMethod(routeData));
+            if(routeData.method == "POST"){
+                this.expressApp.post(routeData.url,this.getContollerMethod(routeData));
+            }else{
+                this.expressApp.get(routeData.url,this.getContollerMethod(routeData));
+            }
         });
     }
     getContollerMethod(routeData) {
@@ -36,6 +51,8 @@ class ServeApplication{
         //regiser local package address as a new address
         this.expressApp.use('/jb-modules', express.static('./Modules/jb-module'));
         this.expressApp.use('/jb-checkbox-react', express.static('./ReactComponents/jb-checkbox-react'));
+        this.expressApp.use('/jb-image-uploader-react', express.static('./ReactComponents/jb-image-uploader-react'));
+        this.expressApp.use('/jb-image-editor-react', express.static('./ReactComponents/jb-image-editor-react'));
         this.expressApp.use('/', express.static('./'));
     }
     watchScssFile(){
