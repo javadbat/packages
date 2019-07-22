@@ -53,6 +53,8 @@ class ServeApplication{
         this.expressApp.use('/jb-checkbox-react', express.static('./ReactComponents/jb-checkbox-react'));
         this.expressApp.use('/jb-image-uploader-react', express.static('./ReactComponents/jb-image-uploader-react'));
         this.expressApp.use('/jb-image-editor-react', express.static('./ReactComponents/jb-image-editor-react'));
+        this.expressApp.use('/jb-selectbox-react', express.static('./ReactComponents/jb-selectbox-react'));
+        this.expressApp.use('/jb-switch-react', express.static('./ReactComponents/jb-switch-react'));
         this.expressApp.use('/', express.static('./'));
     }
     watchScssFile(){

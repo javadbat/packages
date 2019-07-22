@@ -1,7 +1,7 @@
 import React                from 'react'
 import JBSwitchService      from './JBSwitchService'
 import { observer }         from 'mobx-react'
-import './JBSwitch.css'
+import './JBSwitch.css!'
 
 @observer
  class JBSwitch extends React.Component{

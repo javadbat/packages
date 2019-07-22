@@ -1,7 +1,7 @@
 import React                                from 'react'
 import JBSearchBarData                      from './JBSearchBarData'
 import { observable , extendObservable }    from 'mobx'
-import JBSelectBoxData                      from 'jb-selectbox-react/dist/JBSelectBoxData.min'
+import JBSelectBoxData                      from 'jb-selectbox-react/dist/JBSelectBoxData$Build_Type_Prefix.min'
 
 class JBSearchBarService {
     columnSelectConfig = new JBSelectBoxData()

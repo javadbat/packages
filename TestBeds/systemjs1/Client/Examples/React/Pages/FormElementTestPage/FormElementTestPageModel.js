@@ -1,13 +1,15 @@
 import RequestData from 'jb-modules/RequestModule/dist/RequestData.min'
 import {fetchResponseHandler,fetchErrorHandler} from 'jb-modules/FetchHandler/dist/FetchHandler.min'
 import JBImageEditor from 'jb-image-editor-react/lib/JBImageEditor'
+import JBSelectBoxData from 'jb-selectbox-react/dist/JBSelectBoxData.min';
 import ReactDOM         from 'react-dom'
 import { observable }   from 'mobx'
 import React             from 'react'
 class FormElementTestPageModel{
     @observable formData= {
         checkbox1:true,
-        imageName:''
+        imageName:'',
+        selectBox1:2
     }
     imageUploaderConfig={
         urls:{
@@ -25,11 +27,33 @@ class FormElementTestPageModel{
             onApprove:(imageURI)=>this.onImageEditorApproved(imageURI),
         }
     }
+    JBSelectBoxConfig = new JBSelectBoxData()
     elements={
         imageEditorDOM:null
     }
     constructor(){
-
+        this.configSelectBox();
+        
+    }
+    configSelectBox(){
+        this.JBSelectBoxConfig.fieldsNames = {
+            value:'id',
+            caption:'name'
+        }
+        this.JBSelectBoxConfig.options = [
+            {
+                id:1,
+                name:'گزینه 1'
+            },
+            {
+                id:2,
+                name:'گزینه 2'
+            },
+            {
+                id:3,
+                name:'گزینه 3'
+            }
+        ]
     }
     onChange(e,obj,prop){
         obj[prop] = e.target.value;
