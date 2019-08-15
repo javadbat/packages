@@ -55,6 +55,9 @@ class ServeApplication{
         this.expressApp.use('/jb-image-editor-react', express.static('./ReactComponents/jb-image-editor-react'));
         this.expressApp.use('/jb-selectbox-react', express.static('./ReactComponents/jb-selectbox-react'));
         this.expressApp.use('/jb-switch-react', express.static('./ReactComponents/jb-switch-react'));
+        this.expressApp.use('/jb-dateinput-react', express.static('./ReactComponents/jb-dateinput-react'));
+        this.expressApp.use('/jb-searchbar-react', express.static('./ReactComponents/jb-searchbar-react'));
+        this.expressApp.use('/jb-grid-react', express.static('./ReactComponents/jb-grid-react'));
         this.expressApp.use('/', express.static('./'));
     }
     watchScssFile(){

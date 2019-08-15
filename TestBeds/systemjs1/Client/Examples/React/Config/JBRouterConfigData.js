@@ -37,6 +37,16 @@ class RouterData {
                     title:              "form examples",
                     reactComponentPath: "/Client/Examples/React/Pages/FormElementTestPage/FormElementTestPage.js"
                 },
+                {
+                    url:                "/gridTest",
+                    name:               "gridtest",
+                    type:               "REACT",
+                    settings: {
+                        group: "gridExamples"
+                    },
+                    title:              "grid test",
+                    reactComponentPath: "/Client/Examples/React/Pages/GridTest/GridTest.js"
+                },
             ];
 
 }

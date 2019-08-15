@@ -248,8 +248,6 @@ class JBSearchBarService {
             return;
         }
         this.startSearch();
-        
-
     }
     startSearch(){
         //call on search callback and show animation

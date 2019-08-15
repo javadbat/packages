@@ -1,4 +1,3 @@
-
 import { observable}   from 'mobx'
 class JBSwitchService{
     JBSwitchComponentDom = null;

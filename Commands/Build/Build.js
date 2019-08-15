@@ -112,7 +112,7 @@ class BuildClass{
                     main: true,
                     browser: true
                 }),
-                rollupMinify(),
+                //rollupMinify(),
                 cleanup()
               ]
         }

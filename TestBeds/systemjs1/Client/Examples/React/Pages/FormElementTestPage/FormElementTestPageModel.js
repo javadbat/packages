@@ -9,7 +9,11 @@ class FormElementTestPageModel{
     @observable formData= {
         checkbox1:true,
         imageName:'',
-        selectBox1:2
+        selectBox1:2,
+        fromDate:"2008-02-04T12:00:00:00.000"
+    }
+    fromDateConfig={
+        inputMask:"yyyy-MM-ddTHH:mm:ss.SSS",
     }
     imageUploaderConfig={
         urls:{

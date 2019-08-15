@@ -1,7 +1,7 @@
 import React                from 'react'
 import JBSwitchService      from './JBSwitchService'
 import { observer }         from 'mobx-react'
-import './JBSwitch.css!'
+import './JBSwitch.css'
 
 @observer
  class JBSwitch extends React.Component{
@@ -45,6 +45,5 @@ import './JBSwitch.css!'
 //      falseTitle:PropTypes.string,
 //      //if we set it to true component will update value by it self and dont need to update value in onChange event 
 //      //onChange still calling but not necessary anymore
-//      reactive:PropTypes.bool
 //  }
  export default JBSwitch

@@ -36,6 +36,25 @@ class TestApi extends Controller {
         let file = this.path.join(this.assetDir +'/Images/UploadedImage/'+ request.params.imageName);
         response.sendFile(file);
     }
+    TestGridRest(request , response){
+        var content = [];
+        for(let i =request.body.page;i<=(request.body.page + request.body.size);i++){
+            content.push({
+                name:'test-name '+i,
+                category:' دسته'+i
+            })
+        }
+        var res = {
+            content:content,
+            number:request.body.page,
+            size:20,
+            numberOfElements:request.body.size,
+            totalPages:request.body.page+5,
+            totalElements:request.body.size *(request.body.page+5)
+        }
+        response.json(res)
+    
+    }
 }
 
 module.exports = TestApi;

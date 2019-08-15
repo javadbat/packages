@@ -146,6 +146,9 @@ var config = {
                 'jb-modules/Culture/dist/PersianCulture.cjs.min',
                 'jb-modules/FetchHandler/dist/FetchHandler.cjs.min',
                 'jb-modules/RequestModule/dist/RequestData.cjs.min',
+                'jb-searchbar-react/dist/JBSearchBarData$Build_Type_Prefix.min',
+                'jb-searchbar-react/dist/JBSearchBarData.systemjs.min',
+                'jb-searchbar-react/dist/JBSearchBarData.cjs.min',
                 'jb-searchbar-react/dist/JBSearchBarData.min',
                 './JBGrid.css','./JBGrid.css!','./JBLoading.css','./JBLoading.css!']
             },

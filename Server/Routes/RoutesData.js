@@ -25,6 +25,12 @@ var Routes = [
         controller:"TestApi",
         action:"Testimagedownload",
         method:"GET"
-    }
+    },
+    {
+        url:"/api/TestGridRest",
+        controller:"TestApi",
+        action:"TestGridRest",
+        method:"POST"
+    },
 ]
 exports.default = Routes
