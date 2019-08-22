@@ -1,5 +1,6 @@
 var config = {
     rollupConfig:{
+        minify:false,
         packagesEntryPoints:[
             {
                 path:"Modules/jb-module/Culture/PersianCulture.js",
@@ -67,14 +68,14 @@ var config = {
                 dest:"ReactComponents/jb-switch-react/dist/JBSwitch.min.js",
                 cjsDest:"ReactComponents/jb-switch-react/dist/JBSwitch.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-switch-react/dist/JBSwitch.systemjs.min.js",
-                exclude:["react","mobx","mobx-react","./JBSwitch.css","./JBSwitch.css!"]
+                exclude:["react","mobx","mobx-react"]
             },
             {
                 path:"ReactComponents/jb-checkbox-react/lib/JBCheckBox.js",
                 dest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.min.js",
                 cjsDest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-checkbox-react/dist/JBCheckBox.systemjs.min.js",
-                exclude:["react","mobx","mobx-react","prop-types","./JBCheckBox.css","./JBCheckBox.css!"]
+                exclude:["react","mobx","mobx-react","prop-types"]
             },
             {
                 path:"ReactComponents/jb-selectbox-react/lib/JBSelectBox.js",
@@ -82,7 +83,6 @@ var config = {
                 cjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-selectbox-react/dist/JBSelectBox.systemjs.min.js",
                 exclude:["react","mobx","mobx-react",
-                "./JBSelectBox.css","./JBSelectBox.css!",
                 "./JBSelectBoxData$Build_Type_Prefix.min","./JBSelectBoxData.cjs.min","./JBSelectBoxData.min","./JBSelectBoxData.systemjs.min"]
             },
             {
@@ -97,14 +97,14 @@ var config = {
                 dest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.min.js",
                 cjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-dateinput-react/dist/JBDateInput.systemjs.min.js",
-                exclude:["react","mobx",'mobx-react','jb-modules/DateTimeModule/dist/DateTimeConverter.cjs.min','./JBDateInput.css','./JBDateInput.css!']
+                exclude:["react","mobx",'mobx-react','jb-modules/DateTimeModule/dist/DateTimeConverter.cjs.min']
             },
             {
                 path:"ReactComponents/jb-image-uploader-react/lib/JBImageUploader.js",
                 dest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.min.js",
                 cjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-image-uploader-react/dist/JBImageUploader.systemjs.min.js",
-                exclude:["react","mobx",'mobx-react','react-dom','jb-modules/RequestModule/dist/UploadFileRequest.cjs.min','./JBImageUploader.css','./JBImageUploader.css!']
+                exclude:["react","mobx",'mobx-react','react-dom','jb-modules/RequestModule/dist/UploadFileRequest.cjs.min']
             },
             {
                 path:"ReactComponents/jb-searchbar-react/lib/JBSearchBar.js",
@@ -123,8 +123,7 @@ var config = {
                 'jb-dateinput-react/dist/JBDateInput$Build_Type_Prefix.min',
                 'jb-dateinput-react/dist/JBDateInput.systemjs.min',
                 'jb-dateinput-react/dist/JBDateInput.cjs.min',
-                'jb-dateinput-react/dist/JBDateInput.min',
-                './JBSearchBar.css','./JBSearchBar.css!']
+                'jb-dateinput-react/dist/JBDateInput.min',]
             },
             {
                 path:"ReactComponents/jb-searchbar-react/lib/JBSearchBarData.js",
@@ -139,25 +138,25 @@ var config = {
                 cjsDest:"ReactComponents/jb-grid-react/dist/JBGrid.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-grid-react/dist/JBGrid.systemjs.min.js",
                 exclude:["react","mobx",'mobx-react','react-dom',
-                'jb-searchbar-react/dist/JBSearchBar$Build_Type_Prefix.min.min',
-                'jb-searchbar-react/dist/JBSearchBar.systemjs.min',
-                'jb-searchbar-react/dist/JBSearchBar.cjs.min',
-                'jb-searchbar-react/dist/JBSearchBar.min',
-                'jb-modules/Culture/dist/PersianCulture.cjs.min',
-                'jb-modules/FetchHandler/dist/FetchHandler.cjs.min',
-                'jb-modules/RequestModule/dist/RequestData.cjs.min',
-                'jb-searchbar-react/dist/JBSearchBarData$Build_Type_Prefix.min',
-                'jb-searchbar-react/dist/JBSearchBarData.systemjs.min',
-                'jb-searchbar-react/dist/JBSearchBarData.cjs.min',
-                'jb-searchbar-react/dist/JBSearchBarData.min',
-                './JBGrid.css','./JBGrid.css!','./JBLoading.css','./JBLoading.css!']
+                    'jb-searchbar-react/dist/JBSearchBar$Build_Type_Prefix.min.min',
+                    'jb-searchbar-react/dist/JBSearchBar.systemjs.min',
+                    'jb-searchbar-react/dist/JBSearchBar.cjs.min',
+                    'jb-searchbar-react/dist/JBSearchBar.min',
+                    'jb-modules/Culture/dist/PersianCulture.cjs.min',
+                    'jb-modules/FetchHandler/dist/FetchHandler.cjs.min',
+                    'jb-modules/RequestModule/dist/RequestData.cjs.min',
+                    'jb-searchbar-react/dist/JBSearchBarData$Build_Type_Prefix.min',
+                    'jb-searchbar-react/dist/JBSearchBarData.systemjs.min',
+                    'jb-searchbar-react/dist/JBSearchBarData.cjs.min',
+                    'jb-searchbar-react/dist/JBSearchBarData.min'
+                ]
             },
             {
                 path:"ReactComponents/jb-grid-react/lib/JBGridData.js",
                 dest:"ReactComponents/jb-grid-react/dist/JBGridData.min.js",
                 cjsDest:"ReactComponents/jb-grid-react/dist/JBGridData.cjs.min.js",
                 systemjsDest:"ReactComponents/jb-grid-react/dist/JBGridData.systemjs.min.js",
-                exclude:['mobx','./JBLoading.css','./JBLoading.css!']
+                exclude:['mobx']
             },
         ]
     }

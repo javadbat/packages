@@ -8,3 +8,4 @@ application.runExpress();
 application.registerPageUrls();
 application.RegisterStaticFileRoutes();
 application.watchScssFile();
+application.WatchJsFile();

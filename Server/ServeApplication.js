@@ -10,6 +10,7 @@ const Colors        = require('colors');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const scssWatchFile = require("./Config/SassFilesConfig").watchingFiles
+var WatchJsFile = require("./WatchJsFile").defualt
 class ServeApplication{
     constructor(environment){
         process.env.NODE_ENV = "development";
@@ -77,6 +78,9 @@ class ServeApplication{
                 this.compileSass(file);
             });
         }
+    }
+    WatchJsFile(){
+        this.jsWatcher = new WatchJsFile();
     }
     compileSass(file){
         console.log(file);
