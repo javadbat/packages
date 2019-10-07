@@ -18,7 +18,6 @@ class WatchJsFile{
                     exclude:rollupComponent.exclude
                 }
             });
-            watcher.addListener()
             watcher.on('event',event=>{
                 if (event.code === 'BUNDLE_START') {
                     console.log('Bundling...');

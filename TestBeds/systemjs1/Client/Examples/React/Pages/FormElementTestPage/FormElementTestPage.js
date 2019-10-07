@@ -5,7 +5,7 @@ import FormElementTestPageModel from './FormElementTestPageModel'
 import JBImageUploader from 'jb-image-uploader-react/dist/JBImageUploader.systemjs.min'
 import JBSelectBox from 'jb-selectbox-react/dist/JBSelectBox.systemjs.min'
 import JBSwitch from 'jb-switch-react/dist/JBSwitch.systemjs.min'
-import JBDateInput from 'jb-dateinput-react/lib/JBDateInput';
+import JBDateInput from 'jb-dateinput-react/dist/JBDateInput.min';
 import './FormElementTestPage.css!'
 @observer
 class FormElementTestPage extends React.Component{

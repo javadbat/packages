@@ -300,14 +300,16 @@ class JBSearchBarService {
     }
     callOnSearchCallBack(){
         this.isLoading = true;
-        if(this.onSearch){
-        this.onSearch(this.filterList).then((e)=>{
-            this.isLoading = false;
-        }).catch((e)=>{
-            this.isLoading = false;
-        })
+        var searchPromise = this.onSearch(this.filterList);
+        if(Promise.resolve(searchPromise) == searchPromise){
+            //check if return type is promise 
+            searchPromise.then((e)=>{
+                this.isLoading = false;
+            }).catch((e)=>{
+                this.isLoading = false;
+            });
         }else{
-            console.error('the onSeach callback function is not definded');
+            this.isLoading = false; 
         }
             
     }

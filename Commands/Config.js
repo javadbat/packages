@@ -143,8 +143,6 @@ var config = {
                     'jb-searchbar-react/dist/JBSearchBar.cjs.min',
                     'jb-searchbar-react/dist/JBSearchBar.min',
                     'jb-modules/Culture/dist/PersianCulture.cjs.min',
-                    'jb-modules/FetchHandler/dist/FetchHandler.cjs.min',
-                    'jb-modules/RequestModule/dist/RequestData.cjs.min',
                     'jb-searchbar-react/dist/JBSearchBarData$Build_Type_Prefix.min',
                     'jb-searchbar-react/dist/JBSearchBarData.systemjs.min',
                     'jb-searchbar-react/dist/JBSearchBarData.cjs.min',

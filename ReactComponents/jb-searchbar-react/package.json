@@ -15,7 +15,7 @@
     "react",
     "mobx"
   ],
-  "version": "0.0.3",
+  "version": "0.0.9",
   "bugs": "https://github.com/javadbat/jb-searchbar-react/issues",
   "license": "MIT",
   "files": [
@@ -43,7 +43,7 @@
 		"url": "git@github.com:javadbat/jb-searchbar-react.git"
 	},
   "dependencies": {
-    "jb-selectbox-react":">0.0.8",
-    "jb-dateinput-react":">0.0.2"
+    "jb-selectbox-react":"0.0.9",
+    "jb-dateinput-react":"0.0.3"
   }
 }

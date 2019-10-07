@@ -23,6 +23,7 @@ class Layout extends React.Component{
                 <a className="menu-item" href="/Examples/React/FormExamples" onClick={(e)=>this.Model.loadPage(e)}>form examples</a>
                 <a className="menu-item" href="/Examples/React/404page" onClick={(e)=>this.Model.loadPage(e)}>404 page</a>
                 <a className="menu-item" href="/Examples/React/GridTest" onClick={(e)=>this.Model.loadPage(e)}>Grid test</a>
+                <a className="menu-item" href="/Examples/React/SearchBarTest" onClick={(e)=>this.Model.loadPage(e)}>search bar test</a>
             </div>
             <div className="content">
                 <div id="PagePlace">loading...</div>
