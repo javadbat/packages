@@ -1,5 +1,6 @@
 .jb-search-bar-component{
-    height: 100%;
+    height: auto;
+    min-height: 48px;
     .filter-dynamic-wrapper{
         height: 100%;
         width: calc(100% - 45px);
@@ -73,6 +74,7 @@
                         border-bottom: 3px solid #e0e0e0;
                         font-size: 14px;
                         outline: none;
+                        font-family: inherit;
                     }
                 }
                 .date-input{
@@ -116,6 +118,7 @@
             width: 36px;
             height: 36px;
             margin: 4px 8px;
+            box-sizing: border-box;
             circle{
                 stroke: #7b7b7b;
                 fill: white;

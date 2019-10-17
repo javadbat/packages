@@ -47,6 +47,16 @@ class RouterData {
                     title:              "grid test",
                     reactComponentPath: "/Client/Examples/React/Pages/GridTest/GridTest.js"
                 },
+                {
+                    url:                "/SearchBarTest",
+                    name:               "SearchBarTest",
+                    type:               "REACT",
+                    settings: {
+                        group: "SearchBarTest example"
+                    },
+                    title:              "grid test",
+                    reactComponentPath: "/Client/Examples/React/Pages/SearchBarTest/SearchBarTest.js"
+                },
             ];
 
 }

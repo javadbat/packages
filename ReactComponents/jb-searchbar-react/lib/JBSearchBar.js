@@ -16,7 +16,7 @@ class JBSearchBar extends React.Component {
     }
     render () {
         return(
-            <div className="jb-search-bar-component">
+            <div className={"jb-search-bar-component "+(this.props.className != undefined?this.props.className:'')}>
                 <section className="filter-dynamic-wrapper" ref={this.service.elements.filterDynamicWrapper}>
                     <section className="filter-list-section">
                     {

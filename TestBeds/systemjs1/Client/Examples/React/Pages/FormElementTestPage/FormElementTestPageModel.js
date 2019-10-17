@@ -9,7 +9,7 @@ class FormElementTestPageModel{
     @observable formData= {
         checkbox1:true,
         imageName:'',
-        selectBox1:2,
+        selectBox1:1,
         fromDate:"2008-02-04T12:00:00:00.000"
     }
     fromDateConfig={
@@ -118,6 +118,9 @@ class FormElementTestPageModel{
             array.push(binary.charCodeAt(i));
         }
         return new Blob([new Uint8Array(array)], {type: this.selectedImageType});
+    }
+    changeSelectBoxData(){
+        this.formData.selectBox1 = 2;
     }
 }
 export default FormElementTestPageModel;
