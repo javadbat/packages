@@ -1,0 +1,33 @@
+[submodule "WebComponents/jb-input"]
+	path = WebComponents/jb-input
+	url = https://github.com/javadbat/jb-input.git
+[submodule "WebComponents/jb-select"]
+	path = WebComponents/jb-select
+	url = https://github.com/javadbat/jb-select.git
+[submodule "WebComponents/jb-image-input"]
+	path = WebComponents/jb-image-input
+	url = https://github.com/javadbat/jb-image-input.git
+[submodule "WebComponents/jb-button"]
+	path = WebComponents/jb-button
+	url = https://github.com/javadbat/jb-button.git
+[submodule "WebComponents/jb-textarea"]
+	path = WebComponents/jb-textarea
+	url = https://github.com/javadbat/jb-textarea.git
+[submodule "ReactComponents/jb-checkbox-react"]
+	path = ReactComponents/jb-checkbox-react
+	url = https://github.com/javadbat/jb-checkbox-react.git
+[submodule "ReactComponents/jb-dateinput-react"]
+	path = ReactComponents/jb-dateinput-react
+	url = https://github.com/javadbat/jb-dateinput-react.git
+[submodule "ReactComponents/jb-grid-react"]
+	path = ReactComponents/jb-grid-react
+	url = https://github.com/javadbat/jb-grid-react.git
+[submodule "ReactComponents/jb-grid-react"]
+	path = ReactComponents/jb-grid-react
+	url = https://github.com/javadbat/jb-selectbox-react.git
+[submodule "ReactComponents/jb-selectbox-react"]
+	path = ReactComponents/jb-selectbox-react
+	url = https://github.com/javadbat/jb-searchbar-react.git
+[submodule "ReactComponents/jb-switch-react"]
+	path = ReactComponents/jb-switch-react
+	url = https://github.com/javadbat/jb-switch-react.git
