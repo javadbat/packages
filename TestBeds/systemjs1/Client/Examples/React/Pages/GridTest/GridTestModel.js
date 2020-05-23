@@ -6,6 +6,8 @@ import React             from 'react'
 import JBGridData from 'jb-grid-react/dist/JBGridData.systemjs.min'
 class FormElementTestPageModel{
     
+    @observable
+    filterConfig = {}
     constructor(){
         this.InitGrid();
     }
@@ -34,7 +36,7 @@ class FormElementTestPageModel{
     ];
     this.gridConfig.data.url ="/api/TestGridRest";
     this.gridConfig.data.method = "POST";
-    this.gridConfig.filter = {
+    this.filterConfig = {
         columns:[
             {
                 id:1,

@@ -17,7 +17,7 @@ class GridTest extends React.Component{
     render(){
         var layout = 
         <div className="grid-test-wrapper">
-        <JBGrid config={this.model.gridConfig} bridge={JBGridBridge} className="test-grid" title="لیست تستی">
+        <JBGrid config={this.model.gridConfig} bridge={JBGridBridge} className="test-grid" title="لیست تستی" filterConfig={this.model.filterConfig}>
         {
             
             this.model.gridConfig.data.data.map((item,index)=>{
