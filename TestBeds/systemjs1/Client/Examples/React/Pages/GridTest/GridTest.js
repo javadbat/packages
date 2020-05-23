@@ -1,7 +1,7 @@
 import React     from 'react'
 import { observer }     from 'mobx-react'
 import GridTestModel from './GridTestModel'
-import JBGrid from 'jb-grid-react/dist/JBGrid.systemjs.min'
+import JBGrid , {Cell,Row} from 'jb-grid-react/dist/JBGrid.systemjs.min'
 import JBGridBridge from 'jb-grid-react/lib/JBGridBridgeExample'
 import './GridTest.css!'
 
@@ -17,15 +17,15 @@ class GridTest extends React.Component{
     render(){
         var layout = 
         <div className="grid-test-wrapper">
-        <JBGrid config={this.model.gridConfig} bridge={JBGridBridge} className="test-grid">
+        <JBGrid config={this.model.gridConfig} bridge={JBGridBridge} className="test-grid" title="لیست تستی">
         {
             
             this.model.gridConfig.data.data.map((item,index)=>{
                 return(
-                    <div key={index} className="jb-grid-table-row" style={{gridTemplateColumns:this.model.gridConfig.styles.table.generalCols.gridTemplateColumns}}>
-                        <div  className="jb-grid-table-cell" data-caption="نام">{item.name}</div>
-                        <div  className="jb-grid-table-cell" >{item.category}</div>
-                    </div>
+                    <Row key={index} className="my-class" style={{gridTemplateColumns:this.model.gridConfig.styles.table.generalCols.gridTemplateColumns}}>
+                        <Cell caption={"نام"}>{item.name}</Cell>
+                        <Cell>{item.category}</Cell>
+                    </Row>
                 )
             })
         }

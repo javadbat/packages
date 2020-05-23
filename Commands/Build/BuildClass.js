@@ -103,6 +103,7 @@ class BuildClass{
                     ["@babel/plugin-proposal-decorators",{ "legacy": true }],
                     ["@babel/plugin-proposal-class-properties", { loose: true }],
                     "@babel/plugin-syntax-dynamic-import",
+                    "@babel/plugin-proposal-nullish-coalescing-operator"
                 ]
             }),
             postcss({

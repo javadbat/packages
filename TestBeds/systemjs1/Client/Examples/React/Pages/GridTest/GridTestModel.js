@@ -17,7 +17,6 @@ class FormElementTestPageModel{
     }
     InitGrid(){
         this.gridConfig = observable(new JBGridData());
-        this.gridConfig.title = "لیست تستی";
         this.gridConfig.fullScreenable = true;
         this.gridConfig.table.columns = [
             {
