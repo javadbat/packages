@@ -17,7 +17,13 @@ class GridTest extends React.Component{
     render(){
         var layout = 
         <div className="grid-test-wrapper">
-        <JBGrid config={this.model.gridConfig} bridge={JBGridBridge} className="test-grid" title="لیست تستی" filterConfig={this.model.filterConfig}>
+        <JBGrid config={this.model.gridConfig}
+            bridge={JBGridBridge}
+            className="test-grid" title="لیست تستی"
+            filterConfig={this.model.filterConfig}
+            isFullscreen = {this.model.isFullscreen}
+            onFullscreenChange = {(val)=>{this.model.onFullscreenChange(val)}}
+            >
         {
             
             this.model.gridConfig.data.data.map((item,index)=>{

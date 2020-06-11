@@ -8,6 +8,8 @@ class FormElementTestPageModel{
     
     @observable
     filterConfig = {}
+    @observable
+    isFullscreen = false;
     constructor(){
         this.InitGrid();
     }
@@ -17,9 +19,11 @@ class FormElementTestPageModel{
     onChange(e,obj,prop){
         obj[prop] = e.target.value;
     }
+    onFullscreenChange(newValue){
+        this.isFullscreen = newValue;
+    }
     InitGrid(){
         this.gridConfig = observable(new JBGridData());
-        this.gridConfig.fullScreenable = true;
         this.gridConfig.table.columns = [
             {
                 id:1,
